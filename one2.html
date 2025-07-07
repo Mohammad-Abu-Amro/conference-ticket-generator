@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="one.css" />
+    <title>One Traning</title>
+  </head>
+  <body>
+    <div class="foot">
+      <div class="name2">
+      </div>
+      <div class="emaill">
+
+      </div>
+      <div class="logo"> 
+        <img src="/image/logo-mark.svg" alt="" />
+        <h3>Coding Conf</h4></div>
+          <div class="time">
+
+          </div>
+    </div>
+    <style>
+      @media(min-width:768px){
+        .foot .logo{
+          margin-top: 10px;
+        }
+        .ptext ,
+        .h2text{
+          margin-left: -220px;
+        }
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+      }
+      .foot {
+        position: relative;
+      }
+      .foot .logo {
+        position: absolute;
+        top: 0;
+      }
+      .foot .imgg {
+        position: absolute;
+        max-width: 50px;
+        height: 50px;
+        bottom: 50px;
+        border-radius: 10px;
+      }
+      .person .h2text {
+        font-size: 30px;
+        max-width: 350px;
+        position: absolute;
+        top: 100px;
+      }
+      .person .ptext {
+        font-size: 20px;
+        top: 200px;
+        max-width: 440px;
+        position: absolute;
+      }
+      .foot {
+        background-image: url(/image/pattern-ticket.svg);
+        display: block;
+        background-size: contain;
+        width: 350px;
+        height: 200px;
+        background-repeat: no-repeat;
+        margin-top: 200px;
+      }
+      .foot {
+        display: flex;
+        padding: 20px;
+        gap: 10px;
+      }
+      .foot .img {
+        max-width: 25px;
+      }
+      .foot .name2{
+        position: absolute;
+        z-index: 1;
+        bottom: 75px;
+        margin-left: 60px;
+        font-size: 18px;
+      }
+      .foot .emaill{
+        position: absolute;
+        z-index: 1;
+        bottom: 55px;
+        margin-left: 60px;
+        font-size: 12px;
+      }
+      .time{
+        margin-top: 30px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+    </style>
+    <div class="person"></div>
+    <script>
+      let name = document.getElementById("name");
+      let person = document.querySelector(".person");
+      let h2 = document.createElement("h2");
+      h2.className = "h2text";
+      h2.innerHTML = `congrats ,${localStorage.getItem(
+        "username"
+      )}! Your ticket is ready.`;
+      let p = document.createElement("p");
+      p.className = "ptext";
+      p.innerHTML = `We've emailed your ticket to ${localStorage.getItem(
+        "email"
+      )} and will send updaates in the run up to the event.`;
+      person.appendChild(h2);
+      person.appendChild(p);
+      let cover = localStorage.getItem("cover");
+      let foot = document.querySelector(".foot");
+      let imgg = document.createElement("img");
+      let namee = localStorage.getItem("username");
+      let emaill = localStorage.getItem("email");
+      imgg.className = "imgg";
+      imgg.src = cover;
+      imgg.style.width = "20%";
+      foot.appendChild(imgg);
+      document.querySelector(".name2").append(namee);
+      document.querySelector(".emaill").append(emaill);
+      let time = document.querySelector(".time");
+      let now = new Date();
+      const options ={
+        year: "numeric",
+        month: "short",
+        day:"numeric"
+      };
+      const formattedDate = now.toLocaleDateString("en-US" , options);
+      const locationn = "Austin , TX";
+      time.textContent = `${formattedDate} / ${locationn}`;
+    </script>
+  </body>
+</html>

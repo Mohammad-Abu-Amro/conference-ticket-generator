@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="one.css" />
+    <title>One Traning</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="/image/logo-mark.svg" alt="" />
+          <h4>Coding Conf</h4>
+        </div>
+        <div class="person">
+          <h2 class="self">Your Journey to Coding Conf 2025 Starts Here!</h2>
+          <p class="secure">
+            Secure your spot at next year's biggest coding conference.
+          </p>
+        </div>
+      </header>
+      <nav>
+        <div class="upload">
+          <p>Upload Avatar</p>
+          <button class="re1" hidden>Remove Image</button>
+          <div class="upload-box">
+            <div class="img">
+              <img class="up" src="/image/icon-upload.svg" alt="" />
+            </div>
+            <div class="remChang" hidden>
+              <button class="re2">Change image</button>
+            </div>
+            <p id="upload-text">Drag and drop or click to upload</p>
+            <input type="file" class="box" accept="image/*" hidden />
+          </div>
+          <div class="Tooltip">
+            <img src="/image/icon-info.svg" alt="" />
+            <p>Upload your phone (JPG or PNG, max size: 500KB).</p>
+          </div>
+        </div>
+        <form id="myForm">
+          <p>Full Name</p>
+          <input type="text" class="same" id="username" required />
+          <p>Email Address</p>
+          <input
+            type="email"
+            class="same"
+            id="email"
+            placeholder="examole@email.com"
+            required
+          />
+          <p>GitHub Username</p>
+          <input
+            type="text"
+            class="same"
+            id="username"
+            placeholder="@yourusername"
+            required
+          />
+          <br />
+          <button id="btn" class="same" type="submit">
+            Generate My Ticket
+          </button>
+          <a class="go" href="/one2.html"></a>
+        </form>
+      </nav>
+    </div>
+    <script src="one.js"></script>
+  </body>
+</html>
